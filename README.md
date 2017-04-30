@@ -3,4 +3,4 @@
 
 Thanks, and happy hacking!
 
-[mecab-easy]: https://github.com/reouno/mecab-easy
+- [mecab-easy]: https://github.com/reouno/mecab-easy
