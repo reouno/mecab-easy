@@ -1,0 +1,63 @@
+# This YAML file describes your package. Stack will automatically generate a
+# Cabal file when you run `stack build`. See the hpack website for help with
+# this file: <https://github.com/sol/hpack>.
+benchmarks:
+  mecab-easy-benchmarks:
+    dependencies:
+    - base
+    - mecab-easy
+    - criterion
+    ghc-options:
+    - -rtsopts
+    - -threaded
+    - -with-rtsopts=-N
+    main: Main.hs
+    source-dirs: benchmark
+category: Other
+description: mecab-easy is a new Haskeleton package.
+executables:
+  mecab-easy:
+    dependencies:
+    - base
+    - mecab-easy
+    ghc-options:
+    - -rtsopts
+    - -threaded
+    - -with-rtsopts=-N
+    main: Main.hs
+    source-dirs: executable
+extra-source-files:
+- CHANGELOG.md
+- LICENSE.md
+- package.yaml
+- README.md
+- stack.yaml
+ghc-options: -Wall
+github: reouno/mecab-easy
+library:
+  dependencies:
+  - base
+  - mecab
+  - text
+  - split
+  - bytestring
+  source-dirs: library
+license: MIT
+maintainer: Leo Uno
+name: mecab-easy
+synopsis: A new Haskeleton package.
+tests:
+  mecab-easy-test-suite:
+    dependencies:
+    - base
+    - mecab-easy
+    - tasty
+    - tasty-hspec
+    - text
+    ghc-options:
+    - -rtsopts
+    - -threaded
+    - -with-rtsopts=-N
+    main: Main.hs
+    source-dirs: test-suite
+version: '0.0.0'
