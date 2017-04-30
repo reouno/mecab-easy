@@ -1,4 +1,4 @@
-# [mecab-easy][]
+# mecab-easy
 
 
 Thanks, and happy hacking!
