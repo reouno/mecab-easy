@@ -38,8 +38,9 @@ resolver: lts-8.12
 packages:
 - '.'
 - location:
-    git: https://github.com/morishin/hsmecab.git
-    commit: 2da6677fbd42bb77d3b6e61c02edfeebe248e184
+    git: https://github.com/reouno/hsmecab.git
+    commit: 2fd1220564465ce60a79079c51b60858bf7621e9
+  extra-dep: true
 
 # Dependency packages to be pulled from upstream that are not in the resolver
 # (e.g., acme-missiles-0.3)

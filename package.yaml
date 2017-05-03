@@ -37,7 +37,7 @@ github: reouno/mecab-easy
 library:
   dependencies:
   - base
-  - mecab >= 0.4.0 && < 1
+  - mecab2
   - text
   - split
   - bytestring
