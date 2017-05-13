@@ -79,6 +79,9 @@ nodeToWord node = MeCabWord surface' fs0 fs1 fs2 fs3 fs4 fs5 fs6 fs7 fs8
         surface' = case M.nodeStat node of
             M.BOS -> "MECAB_BOS"
             M.EOS -> "MECAB_EOS"
+            M.NOR -> "MECAB_NOR"
+            M.UNK -> "MECAB_UNK"
+            M.EON -> "MECAB_EON"
         fs = splitOn' "," . M.nodeFeature $ node
         [fs0,fs1,fs2,fs3,fs4,fs5,fs6,fs7,fs8] = case length fs of
             7 -> fs ++ ["",""]
