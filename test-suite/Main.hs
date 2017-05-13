@@ -39,6 +39,10 @@ spec = parallel $ do
     it "is surface field of MeCabWord record ok" $ do
         results <- MeCab.parseToNodes ("コンニチハ" :: DT.Text)
         MeCab.surface (head results) `shouldBe` ("MECAB_BOS" :: DT.Text)
+    -- ２つ目（1番目の要素）のsurfaceは "コンニチハ" である
+    it "is surface field of \"コンニチハ\" ok" $ do
+        results <- MeCab.parseToNodes ("コンニチハ" :: DT.Text)
+        MeCab.surface (results !! 1) `shouldBe` ("コンニチハ" :: DT.Text)
 
     it "are all fields of MeCabWord record ok" $ do
         results <- MeCab.parseToNodes ("コンニチハ" :: DT.Text)
